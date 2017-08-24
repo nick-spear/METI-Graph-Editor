@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <title>METI Graph Editor</title>
+
+    <script type="text/javascript" src="../js/graph.js"></script>
+    <script type="text/javascript" src="../js/listeners.js"></script>
+    <script type="text/javascript" src="../js/panning.js"></script>
+    <script type="text/javascript" src="../js/ctrlz.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="staticElements.css">
+  </head>
+
+  <body>
+    <div id=selectionContainer>
+      <div id="headerBlock">
+        Selected Element
+      </div>
+      <div id="editContainer">
+        <div id="select">
+          <div>
+            <div id="selectedTitle"> Preview </div>
+            <svg id="selectDisplay" height="144px" width="155px" viewBox="0 0 144 155" preserveAspecRatio="xMinYMax meet"></svg>
+            <button id="removeButton"> Remove Element </button>
+          </div>
+          <ul id="selectAttributes"></ul>
+        </div> <!-- Select Menu -->
+
+        <div id="menu">
+      </div>
+      <div id="toolbar">
+        <div id="editModes">
+          <div class="toolTitle"> Edit Modes </div>
+          <button id="selectEdit"> Select </button>
+          <button id="moveEdit"> Move </button>
+          <button id="nodeEdit"> Add Node</button>
+          <button id="edgeEdit"> Add Edge</button>
+        </div>
+        <div id="fileModes">
+          <div class="toolTitle"> Edit Modes </div>
+          <label for="loadGraph">Load</label>
+          <input id="loadGraph" type="file" accept=".txt"/>
+        </div>
+      </div>
+    </div>
+
+    </div>
+    <svg id="svgEle" width="2000" height="1000" preserveAspectRatio="xMinYMax meet">
+      <image x="25%" y="calc(50% - 100)" height="200" width="50%"  xlink:href="../svg/metiBG.svg" />
+      <g id="svgBody">
+        <g id="innerSVG">
+          <circle cx="0" cy="0" r="50" fill="black"></circle>
+          <circle cx="1000" cy="0" r="50" fill="black"></circle>
+          <circle cx="1000" cy="1000" r="50" fill="black"></circle>
+          <circle cx="0" cy="1000" r="50" fill="black"></circle>
+        </g>
+      </g>
+    </svg>
+    <!-- <div id="toolbar">
+      Supnerds
+      <label for="loadGraph">Load</label>
+      <input id="loadGraph" type="file" accept=".txt"/>
+
+      <button id="selectEdit"> Select </button>
+      <button id="moveEdit"> Move </button>
+    </div> -->
+
+  </body>
+
+</html>

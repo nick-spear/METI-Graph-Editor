@@ -1,0 +1,273 @@
+body {
+  font-family: "Arial", monospace;
+  font-style: normal;
+  margin: 0px;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+ /*
+usm yellow: #F7B700;
+usm dark blue: #0e1033;
+usm light blue: #00539b;
+*/
+
+/*
+Dark Background: #0e1033
+Main header color: #00539B
+Background: #e2e2e2
+
+mcsc back
+*/
+#selectionContainer {
+  position:fixed;
+  top:0px;
+  left:0px;
+  z-index:1;
+}
+
+#headerBlock {
+  position:relative;
+  font-weight: 400;
+  font-size: 24px;
+  background: hsl(237, 20%, 23%);
+  color:hsl(237, 57%, 98%);
+  text-align: center;
+  padding: 0px;
+  width: 450px;
+  height: 40px;
+  line-height:40px;
+  z-index: 1;
+
+  border: 2px solid hsl(237, 20%, 10%);
+  border-bottom: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+#headerTitle {
+  background: hsl(237, 57%, 13%);
+  text-align: center;
+  font-style: italic;
+  font-family: cursive;
+  height: 26px;
+  line-height: 26px;
+  font-size: 18px;
+  font-weight: 400;
+  color: hsl(237, 20%, 90%);
+  border-bottom: 1px solid hsl(237, 20%, 60%);
+  margin: 0px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+#toolbar {
+  position: relative;
+  background: black;
+  display:inline;
+  line-height: 30px;
+  height: 30px;
+  padding: 0px;
+}
+
+#toolbar > div {
+  padding: 0px;
+  margin:0px;
+  width: 100%;
+}
+
+.toolTitle {
+  color: pink;
+  width: 144px;
+  float:left;
+  text-align: right;
+}
+
+#loadGraph {
+  display: none;
+}
+
+#editContainer {
+  z-index: 1;
+  position: relative;
+  width : 450px;
+  padding: 0px;
+  color: hsl(237, 20%, 95%);
+  background: hsl(237, 20%, 23%);
+
+  border: 2px solid hsl(237, 20%, 10%);
+  border-top: none;
+  border-bottom: none;
+}
+
+#select {
+  height: 210px;
+  margin-top: 1px;
+}
+
+#selectDisplay {
+  position: absolute;
+  margin-top: 32px;
+  float: left;
+  border: 2px solid hsl(0, 33%, 45%);
+  border-top: none;
+  background: hsl(0, 33%, 94%);
+}
+#selectedTitle {
+  position:absolute;
+  color: hsl(0, 33%, 20%);
+  background-color: hsl(0, 33%, 94%);
+  border: 2px solid hsl(0, 33%, 45%);
+  border-bottom: none;
+  font-size: 20px;
+  font-weight: 600;
+  width: 155px;
+  height: 30px;
+  line-height: 32px;
+  text-align: center;
+  padding: 0px;
+}
+
+#removeButton {
+  position:absolute;
+  color: hsl(350, 50%, 25%);
+  background-color: hsl(350, 50%, 90%);
+  border: 2px solid hsl(350, 50%, 40%);
+  border-top: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  width: 159px;
+  height: 32px;
+  margin-top: 178px;
+  padding: 6px 4px;
+  transition: background-color 0.2s ease-in-out
+}
+
+#removeButton:hover {
+  background-color: hsl(350, 55%, 75%);
+}
+
+#selectAttributes {
+  font-size: 20px;
+  list-style: none;
+  margin:0px;
+  margin-left: 104px;
+}
+
+#selectAttributes > li {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  margin: 0px;
+}
+
+.li1 {
+  background-color: hsl(237, 20%, 18%)
+}
+
+.li1 > select, .li1 > input, .li1 > div, .li1 > form > input {
+  background-color: hsl(237, 20%, 21%)
+}
+
+.li2 {
+  background-color: hsl(237, 20%, 23%)
+}
+
+.li2 > select, .li2 > div, .li2 > form > input {
+  background-color: hsl(237, 20%, 26%)
+}
+
+.attributeTitle {
+  position: absolute;
+  width: 130px;
+  text-align: right;
+  color: hsl(237, 20%, 95%);
+}
+
+.idAttribute {
+  width: 154px;
+  color: hsl(237, 20%, 85%);
+  padding-left: 7px;
+  font-style: italic;
+  float:right;
+  margin: 1px 5px 1px 0px;
+  height: 28px;
+}
+
+.nameAttribute {
+  color: hsl(237, 20%, 95%);
+  font-size: 18px;
+  border: none;
+  width: 154px;
+  height: 26px;
+  margin-top: 1px;
+  margin-right: 5px;
+  padding-left: 7px;
+  float: right;
+}
+
+.typeAttribute {
+  width: 161px;
+  height: 28px;
+  color: hsl(237, 20%, 95%);
+  border: none;
+  font-size: 18px;
+  padding: 2px;
+  margin: 0px;
+  margin-top: 1px;
+  margin-right: 5px;
+  float:right;
+}
+
+#menu {
+  position: relative;
+}
+
+.selectLabel {
+  text-align: right;
+  line-height: 30px;
+}
+
+#svgEle {
+  position: fixed;
+  background: rgb(245,235,235);
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+/* Node and Edge Styling */
+.nodeLabel { /* Text labels attached to nodes */
+    font-family: "Arial", monospace;
+    font-style: normal;
+    font-size  : 30px;
+    font-weight: bold;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+.edge {
+    stroke-width: 6;
+    fill: none;
+    transition: stroke-width .3s ease-in-out;
+    -moz-transition: stroke-width .3s ease-in-out;
+    -webkit-transition: stroke-width .3s ease-in-out;
+}
+#addEdge {
+    stroke-width: 6;
+    stroke: black;
+}
